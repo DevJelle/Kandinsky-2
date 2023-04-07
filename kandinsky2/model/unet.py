@@ -561,7 +561,7 @@ class UNetModel(nn.Module):
             nn.Identity(),
             zero_module(conv_nd(dims, input_ch, out_channels, 3, padding=1)),
         )
-        self.use_fp16 = use_fp16
+        self.use_fp16 = False #use_fp16
 
     def convert_to_fp16(self):
         """
